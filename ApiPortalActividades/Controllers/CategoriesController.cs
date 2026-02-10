@@ -20,7 +20,7 @@ namespace ApiPortalActividades.Controllers
         }
 
         // GET: api/Categories
-        [Authorize]
+        [AllowAnonymous]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Category>>> GetCategories()
         {
@@ -31,7 +31,7 @@ namespace ApiPortalActividades.Controllers
         }
 
         // GET: api/Categories/5
-        [Authorize]
+        [AllowAnonymous]
         [HttpGet("{id}")]
         public async Task<ActionResult<Category>> GetCategory(int id)
         {
